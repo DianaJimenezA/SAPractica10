@@ -1,9 +1,8 @@
-##Practica 10
+# Practica-10
 1. Utilizar la práctica # 7 como base.
 2. Crear un repositorio nuevo (base DevOps) que sea capaz de utilizar el repositorio de dicha práctica para construir (si hace falta) y desplegar el ambiente completo (base de datos y aplicación) y que esta práctica 7 corra sobre Docker.
 3. Entrega en repositorio y video de demostración (2 minutos máximo).
-
-##Procedimiento
+# Procedimiento
 1. Tener Instalado docker compose, la practica fue realizada en Windows 10, por lo cual se tienen Docker Desktop y una extension en Visual Studio Code.
 2. La practica fue realizada en nodejs, con 4 aplicaciones
 -Repartidor puerto 5000
