@@ -1,0 +1,48 @@
+version: '3.8'
+services:
+    WebCliente:
+        build: 
+            context: .
+            dockerfile: Dockerfile
+        image: nodejs
+        restart: unless-stoped
+        env_file: ./Practica 7/Practica 7/Practica 3 Cliente/.env
+        ports:
+            - "5000:5000"
+            - "4000:4000"
+            - "3000:3000"
+            - "2000:2000"
+        volumes:
+            - .:/Practica 7/Practica 7/Practica 3 Cliente 
+            - ./Practica 7/Practica 7/ Practica 3 Cliente/node_modules       
+        command: ./Practica 7/Practica 7/Practica 3 Cliente/nodemon app.js
+
+    WebRep:
+        build: . 
+        image: nodejs
+        restart: unless-stoped
+        env_file: ./Practica 7/Practica 7/Practica 3 Repartidor/.env
+        ports:
+            - "5000:5000"
+            - "4000:4000"
+            - "3000:3000"
+            - "2000:2000"
+        volumes:
+            - .:/Practica 7/Practica 7/Practica 3 Repartidor 
+            - ./Practica 7/Practica 7/ Practica 3 Repartidor/node_modules       
+        command: ./Practica 7/Practica 7/Practica 3 Repartidor/nodemon app.js
+    
+    WebESB:
+        build: . 
+        image: nodejs
+        restart: unless-stoped
+        env_file: ./Practica 7/Practica 7/Practica 4 ESB/.env
+        ports:
+            - "5000:5000"
+            - "4000:4000"
+            - "3000:3000"
+            - "2000:2000"
+        volumes:
+            - .:/Practica 7/Practica 7/Practica 4 ESB 
+            - ./Practica 7/Practica 7/ Practica 4 ESB/node_modules       
+        command: ./Practica 7/Practica 7/Practica 4 ESB/nodemon app.js
